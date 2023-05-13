@@ -1,6 +1,6 @@
 ## Build stage
 FROM maven:latest AS builder
-COPY / .
+COPY app/ .
 RUN cd CustomerOrderServicesProject && mvn clean package
 
 ## Application image
