@@ -3,8 +3,7 @@ FROM maven:latest AS builder
 COPY app/ .
 RUN cd CustomerOrderServicesProject 
 RUN mvn --version
-RUN mvn clean
-RUN mvn package
+RUN mvn clean package
 
 ## Application image
 FROM openliberty/open-liberty:full-java8-openj9-ubi
