@@ -1,10 +1,10 @@
 ## Build stage
 FROM maven:latest AS builder
 COPY app/ .
-RUN pwd
-RUN ls
 RUN cd CustomerOrderServicesProject 
-RUN mvn clean package
+RUN mvn --version
+RUN mvn clean
+RUN mvn package
 
 ## Application image
 FROM openliberty/open-liberty:full-java8-openj9-ubi
