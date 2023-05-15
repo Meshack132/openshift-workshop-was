@@ -1,6 +1,8 @@
 ## Build stage
 FROM maven:latest AS builder
 COPY app/ .
+RUN pwd
+RUN ls
 RUN cd CustomerOrderServicesProject 
 RUN mvn clean package
 
